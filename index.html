@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vikasauto.in</title>
+  <style>
+    body {margin:0; font-family: 'Segoe UI', sans-serif; line-height:1.6; color:#222; background:#fdfdfd;}
+    header {background:linear-gradient(90deg, #0d1b2a, #1b263b); color:#fff; padding:15px 30px; display:flex; justify-content:space-between; align-items:center; position:sticky; top:0; z-index:1000; box-shadow:0 3px 8px rgba(0,0,0,0.3);}
+    header img {height:50px;}
+    nav {display:flex; flex-wrap:wrap;}
+    nav a {color:#fff; margin-left:20px; text-decoration:none; font-weight:500; transition:color 0.3s;}
+    nav a:hover {color:#ffb703;}
+    .hero {background:linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.6)), url('factory.jpg') center/cover no-repeat; color:#fff; text-align:center; padding:120px 20px; animation:fadeIn 1.5s ease-in-out;}
+    .hero h2 {font-size:40px; margin-bottom:20px; text-shadow:1px 1px 5px rgba(0,0,0,0.6);}
+    .btn {background:#ff6600; color:#fff; padding:14px 28px; border:none; border-radius:25px; cursor:pointer; text-decoration:none; font-size:18px; font-weight:bold; transition:all 0.3s ease; box-shadow:0 4px 10px rgba(0,0,0,0.2);}
+    .btn:hover {background:#ff8800; transform:scale(1.05);}
+    section {padding:70px 20px; max-width:1100px; margin:auto; opacity:0; transform:translateY(40px); transition:all 1s ease;}
+    section.visible {opacity:1; transform:translateY(0);}
+    section h2 {text-align:center; margin-bottom:40px; color:#0d1b2a; font-size:28px; position:relative;}
+    section h2::after {content:''; display:block; width:60px; height:4px; background:#ff6600; margin:10px auto 0; border-radius:2px;}
+    .about, .vision, .customers, .production, .contact, .certificates {background:#fff; border-radius:12px; padding:30px; margin-bottom:50px; box-shadow:0 4px 12px rgba(0,0,0,0.05);}
+    ul {list-style:none; padding:0;}
+    li {margin:10px 0; position:relative; padding-left:20px;}
+    li::before {content:'✔'; position:absolute; left:0; color:#ff6600;}
+    .gallery {display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:15px;}
+    .gallery img {width:100%; border-radius:12px; transition:transform 0.3s ease, box-shadow 0.3s ease; cursor:pointer;}
+    .gallery img:hover {transform:scale(1.05); box-shadow:0 6px 15px rgba(0,0,0,0.2);}
+    footer {background:#0d1b2a; color:#fff; text-align:center; padding:25px;}
+    footer p {margin:5px 0;}
+    .contact-info {text-align:center; line-height:1.8;}
+
+    /* Certificates Grid */
+    .cert-grid {display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:20px;}
+    .cert-card {background:#fff; border-radius:10px; box-shadow:0 2px 8px rgba(0,0,0,0.1); padding:15px; text-align:center;}
+    .cert-card img {width:100%; border-radius:8px; cursor:pointer;}
+    .cert-card p {margin-top:10px; font-weight:600;}
+
+    /* Contact section background */
+    .contact {
+      background:linear-gradient(rgba(0,33,71,0.85), rgba(0,33,71,0.85)), url('contact-bg.jpg') center/cover no-repeat;
+      color:#fff;
+      position:relative;
+    }
+    .contact h2 {color:#fff;}
+    .contact h2::after {background:#ffb703;}
+    .contact .contact-info p, .contact .contact-info a {color:#fff;}
+    
+     /* WhatsApp Floating Button */
+    .whatsapp-float {
+      position: fixed;
+      width: 55px;
+      height: 55px;
+      bottom: 20px;
+      right: 20px;
+      background: #25d366;
+      color: #fff;
+      border-radius: 50%;
+      text-align: center;
+      font-size: 28px;
+      line-height: 55px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      z-index: 1000;
+      transition: transform 0.3s;
+    }
+    .whatsapp-float:hover { transform: scale(1.1); }
+
+
+    /* Animations */
+    @keyframes fadeIn {from{opacity:0;} to{opacity:1;}}
+
+    /* Responsive */
+    @media(max-width:768px){
+      header {flex-direction:column; align-items:flex-start;}
+      nav {margin-top:10px;}
+      nav a {margin:8px 10px 0 0;}
+      .hero h2 {font-size:28px;}
+      .btn {font-size:16px; padding:12px 20px;}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1> Vikas Autos  </h1>
+    <nav>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Trusted Supplier of Precision Auto Components Since 2003</h2>
+    <a href="https://wa.me/919416857820" class="btn">📞 Contact Us</a>
+    
+  </section>
+
+  <section id="about" class="about">
+    <h2>About Us</h2>
+    <p><strong>Incorporated:</strong> 20th March 2003</p>
+    <p><strong>Capital Outlay:</strong> ₹15 Crore</p>
+    <p><strong>Industry:</strong> Medium Scale Industry</p>
+    <p><strong>Paromoter:</strong> Sh. Devraj Yadav</p>
+    <p><strong>Works Area:</strong> 1100 Meter </p>
+    <p>Manufacturer & supplier of precision auto components with strong presence in OEM supply chain.</p>
+  </section>
+
+  <section id="vision" class="vision">
+    <h2>Vision</h2>
+    <ul>
+      <li>Expand into global auto component supply</li>
+      <li>Commitment to quality & innovation</li>
+      <li>Strengthened by ISO 9001:2015 certification</li>
+    </ul>
+  </section>
+
+  <section id="personnel" class="personnel">
+    <h2>Key Personnel</h2>
+    <ul>
+      <li>Shri Devraj Yadav – Chairman</li>
+      <li>Mr. Rohit Yadav – Managing Director</li>
+      <li>Mr. Ritesh – Chartered Accountant</li>
+      <li>Mr. Inderjeet Yadav – Production Head</li>
+      <li>Mr. Naveen Kumar – Quality Head</li>
+      <li>Mr. Lokesh – Manager (GST)</li>
+    </ul>
+  </section>
+
+  <section id="customers" class="customers">
+    <h2>Major Customers</h2>
+    <ul>
+      <li> M/S Satyam Auto Components Ltd. Dharuhera</li>
+       <li> M/S Satyam Auto Components Ltd. Manesar</li>
+        <li> M/S Satyam Auto Components Ltd.  Halol</li>
+         <li> M/S Satyam Auto Components Ltd.  Haridwar</li>
+      <li>Metalman Micro Turners</li>
+      <li>Metalman febtech LLP</li>
+      <li>Other OEM & Tier-1 suppliers</li>
+    </ul>
+  </section>
+
+  <section id="production" class="production">
+    <h2>Production Capabilities</h2>
+    <ul>
+      <li><strong>Facilities:</strong> Tool Room, Press Shop, Weld Shop, SPM Machines</li>
+      <li><strong>Machinery:</strong> Power Presses, Welding Machines, Drilling Machines, Pipe Cutting, Quality Testing Instruments</li>
+    </ul>
+  </section>
+
+  <section id="gallery" class="gallery">
+    <h2>Photo Gallery</h2>
+    <img src="https://i.postimg.cc/TPKTPkxY/factory-view.jpg" alt="Factory view">
+    <img src="https://i.postimg.cc/Vv2fyp5C/machinery.jpg" alt="Machinery">
+    <img src="https://i.postimg.cc/tgD9RYYy/workers.jpg" alt="Workers assembling">
+  </section>
+
+  <!-- Certificates Section -->
+  <section id="certificates" class="certificates">
+    <h2>Our Certifications</h2>
+    <div class="cert-grid">
+      <div class="cert-card">
+        <img src="https://i.postimg.cc/pV35M1wC/certificates1.jpg" alt="Awarded Certificate 1">
+        <p>Awarded Certificate</p>
+      </div>
+      <div class="cert-card">
+        <img src="https://i.postimg.cc/LsyhCykz/certificate-2.jpg" alt="Awarded Certificate 2">
+        <p>Awarded Certificate</p>
+      </div>
+      <div class="cert-card">
+        <img src="https://i.postimg.cc/L4P6L4Wk/certificate-3.jpg" alt="Udyam Certificate">
+        <p>Udyam Registration Certificate</p>
+      </div>
+      <div class="cert-card">
+        <img src="https://i.postimg.cc/1zVb2XwJ/certificate-4.jpg" alt="MSME Certificate">
+        <p> MSME Certificate</p>
+      </div>
+      <div class="cert-card">
+        <img src="https://i.postimg.cc/rsVnVwR6/certificate-5.jpg" alt="GST Certificate">
+        <p> MSME Certificate</p>
+      </div>
+      <div class="cert-card">
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <div class="contact-info">
+      <p>📍 Near Reliance Petrol Pump, Delhi-Jaipur Highway, NH-8, Dharuhera (Rewari, HR)</p>
+      <p>📞 9416857820, 9467721044</p>
+      <p>📧 vikasauto73@gmail.com</p>
+    </div>
+  </section>
+
+  <footer>
+    <footer>
+  <p>ISO 9001:2015 Certified | Udyam Registered | MSME Certified </p>
+  <p>Trusted Supplier Since 2003</p>
+  <p>© 2003 Vikas Auto – All Rights Reserved</p>
+  <br>
+  <p>✨ Created with ❤️ in India by Jatin Yadav ✨</p>
+</footer>
+
+  </footer>
+
+     <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/919416857820?text=Hello%20Vikas%20Auto%2C%20I%20am%20interested%20in%20your%20services." class="whatsapp-float" target="_blank">💬</a>
+  <script>
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        if(this.getAttribute('href').startsWith('#')){
+          e.preventDefault();
+          document.querySelector(this.getAttribute('href')).scrollIntoView({behavior: 'smooth'});
+        }
+      });
+    });
+
+    // Scroll reveal animation
+    const sections = document.querySelectorAll('section');
+    const revealOnScroll = () => {
+      const triggerBottom = window.innerHeight * 0.85;
+      sections.forEach(sec => {
+        const secTop = sec.getBoundingClientRect().top;
+        if(secTop < triggerBottom){
+          sec.classList.add('visible');
+        }
+      });
+    };
+    window.addEventListener('scroll', revealOnScroll);
+    window.addEventListener('load', revealOnScroll);
+  </script>
+</body>
+</html>
